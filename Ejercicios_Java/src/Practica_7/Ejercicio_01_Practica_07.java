@@ -1,4 +1,5 @@
-public class Practica_7 {
+package Practica_7;
+public class Ejercicio_01_Practica_07 {
     public static void main(String[] args) throws Exception {
         int[] n = {1, 2, 3, 4, 5, 6};
         
