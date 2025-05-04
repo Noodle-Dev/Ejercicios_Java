@@ -21,5 +21,6 @@ public class Ejercicio_01 {
             System.out.print(num + ", ");
         }
         System.out.println("Promedio: " + promedio);
+        
     }
 }
