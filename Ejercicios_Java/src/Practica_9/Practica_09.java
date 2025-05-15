@@ -5,8 +5,8 @@ import java.util.Arrays;
 /*
 ============================================================================
 * Programa: Análisis de Arreglo Numérico
-* Autor: Alejandro Alonso Membrila, 
-* Fecha: [Fecha de realización]
+* Autor: Alejandro Alonso Membrila, Hassan Karim Leyva Esquivel, Rigoberto Ordaz Cavadaz, Patrick Rubi Garcia Sandoval
+* Fecha: 14 mayo 2024
 * Descripción:
 * Este programa permite analizar un arreglo de números mediante un menú interactivo
 * con diversas opciones de procesamiento, aplicando principios de programación modular.
@@ -60,7 +60,7 @@ public class Practica_09 {
             
             if (opcion != 7) {
                 System.out.println("\nPresione Enter para continuar...");
-                scanner.nextLine(); // Limpiar buffer
+                scanner.nextLine(); 
                 scanner.nextLine(); // Esperar Enter
             }
             
@@ -83,10 +83,7 @@ public class Practica_09 {
         System.out.println("7. Salir");
     }
     
-    /**
-     * Muestra todos los números del arreglo
-     * @param arreglo Arreglo de números a mostrar
-     */
+    //Muestra todo el arreglo
     public static void mostrarNumeros(int[] arreglo) {
         System.out.println("\nNúmeros en el arreglo:");
         for (int i = 0; i < arreglo.length; i++) {
@@ -95,10 +92,7 @@ public class Practica_09 {
         }
     }
     
-    /**
-     * Muestra el número mayor y menor del arreglo
-     * @param arreglo Arreglo de números a analizar
-     */
+    //Muestra el numero mayor y el menor
     public static void mostrarMayorYMenor(int[] arreglo) {
         int mayor = encontrarMayor(arreglo);
         int menor = encontrarMenor(arreglo);
@@ -106,7 +100,7 @@ public class Practica_09 {
         System.out.println("Número menor: " + menor);
     }
 
-    //Encuentra el numero mayor del arreglo
+    //Muestra el numero mayor del arreglo
     public static int encontrarMayor(int[] arreglo) {
         int mayor = arreglo[0];
         for (int num : arreglo) {
@@ -117,11 +111,7 @@ public class Practica_09 {
         return mayor;
     }
     
-    /**
-     * Encuentra el número menor en el arreglo
-     * @param arreglo Arreglo de números
-     * @return El número menor encontrado
-     */
+    //Encuentra el numero menor del arreglo
     public static int encontrarMenor(int[] arreglo) {
         int menor = arreglo[0];
         for (int num : arreglo) {
@@ -132,20 +122,13 @@ public class Practica_09 {
         return menor;
     }
     
-    /**
-     * Calcula y muestra el promedio de los números
-     * @param arreglo Arreglo de números
-     */
+   //Muestra el promedio del arreglo
     public static void mostrarPromedio(int[] arreglo) {
         double promedio = calcularPromedio(arreglo);
         System.out.printf("\nPromedio de los números: %.2f\n", promedio);
     }
     
-    /**
-     * Calcula el promedio de los números en el arreglo
-     * @param arreglo Arreglo de números
-     * @return El promedio calculado
-     */
+    //Calculo del promedio
     public static double calcularPromedio(int[] arreglo) {
         int suma = 0;
         for (int num : arreglo) {
@@ -154,10 +137,7 @@ public class Practica_09 {
         return (double) suma / arreglo.length;
     }
     
-    /**
-     * Cuenta y muestra la cantidad de números pares e impares
-     * @param arreglo Arreglo de números
-     */
+    //Cuenta la cantidad de numero pares e impares
     public static void contarParesEImpares(int[] arreglo) {
         int pares = 0, impares = 0;
         for (int num : arreglo) {
@@ -171,11 +151,7 @@ public class Practica_09 {
         System.out.println("Cantidad de números impares: " + impares);
     }
     
-    /**
-     * Busca un número específico en el arreglo
-     * @param arreglo Arreglo de números
-     * @param scanner Objeto Scanner para entrada de usuario
-     */
+    //Busca un numero especifico intriducido por el usuario
     public static void buscarNumeroEnArreglo(int[] arreglo, Scanner scanner) {
         System.out.print("\nIngrese el número a buscar: ");
         int buscado = scanner.nextInt();
@@ -188,12 +164,7 @@ public class Practica_09 {
         }
     }
     
-    /**
-     * Busca un número en el arreglo
-     * @param arreglo Arreglo de números
-     * @param buscado Número a buscar
-     * @return true si el número está en el arreglo, false en caso contrario
-     */
+    //busca el nunmero en el arreglo intruducido por el usuario
     public static boolean buscarNumero(int[] arreglo, int buscado) {
         for (int num : arreglo) {
             if (num == buscado) {
@@ -203,12 +174,9 @@ public class Practica_09 {
         return false;
     }
     
-    /**
-     * Ordena y muestra el arreglo en orden ascendente
-     * @param arreglo Arreglo de números
-     */
+   //Ordena y muestra el arreglo en orden ascendente
     public static void ordenarYMostrar(int[] arreglo) {
-        // Hacemos una copia para no modificar el arreglo original
+        // copia pa no modificar el original
         int[] copia = Arrays.copyOf(arreglo, arreglo.length);
         ordenarAscendente(copia);
         
@@ -219,10 +187,7 @@ public class Practica_09 {
         }
     }
     
-    /**
-     * Ordena un arreglo en orden ascendente usando el algoritmo de burbuja
-     * @param arreglo Arreglo a ordenar
-     */
+    //Ordena con ordenamiento burbuja
     public static void ordenarAscendente(int[] arreglo) {
         for (int i = 0; i < arreglo.length - 1; i++) {
             for (int j = 0; j < arreglo.length - i - 1; j++) {
