@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class GestionAutomoviles {
-    // Vector para almacenar los automóviles (más de 5 para cumplir con extras)
+
     private static Automovil[] automoviles = new Automovil[8];
     private static int contadorAutos = 0;
     private static Scanner scanner = new Scanner(System.in);
@@ -13,7 +13,7 @@ public class GestionAutomoviles {
             mostrarMenu();
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar buffer
+            scanner.nextLine();
             
             switch (opcion) {
                 case 1:
@@ -29,7 +29,7 @@ public class GestionAutomoviles {
                     modificarAutomovil();
                     break;
                 case 5:
-                    System.out.println("¡Hasta luego!");
+                    System.out.println("Saliendo");
                     break;
                 default:
                     System.out.println("Opción no válida. Intente nuevamente.");
@@ -40,7 +40,7 @@ public class GestionAutomoviles {
         scanner.close();
     }
     
-    // Método para mostrar el menú
+    //mostrar el menú
     public static void mostrarMenu() {
         System.out.println("\n=== SISTEMA DE GESTIÓN DE AUTOMÓVILES ===");
         System.out.println("1. Capturar automóvil");
@@ -51,7 +51,7 @@ public class GestionAutomoviles {
         System.out.println("==========================================");
     }
     
-    // Método para capturar un automóvil
+    // capturar un automóvil
     public static void capturarAutomovil() {
         if (contadorAutos >= automoviles.length) {
             System.out.println("El vector está lleno. No se pueden agregar más automóviles.");
@@ -62,7 +62,7 @@ public class GestionAutomoviles {
         
         System.out.print("Ingrese el precio del automóvil: $");
         double precio = scanner.nextDouble();
-        scanner.nextLine(); // Limpiar buffer
+        scanner.nextLine();
         
         System.out.print("Ingrese el color del automóvil: ");
         String color = scanner.nextLine();
@@ -74,7 +74,7 @@ public class GestionAutomoviles {
         System.out.println("Automóvil capturado exitosamente!");
     }
     
-    // Método para imprimir todos los automóviles
+    // imprimir todos los automóviles
     public static void imprimirAutomoviles() {
         System.out.println("\n--- LISTA DE TODOS LOS AUTOMÓVILES ---");
         
@@ -99,7 +99,7 @@ public class GestionAutomoviles {
         System.out.print("Seleccione opción de búsqueda: ");
         
         int opcionBusqueda = scanner.nextInt();
-        scanner.nextLine(); // Limpiar buffer
+        scanner.nextLine();
         
         boolean encontrado = false;
         
@@ -144,7 +144,7 @@ public class GestionAutomoviles {
         }
     }
     
-    // Método para modificar automóvil (EXTRA)
+    // Modificar automóvil
     public static void modificarAutomovil() {
         if (contadorAutos == 0) {
             System.out.println("No hay automóviles registrados para modificar.");
@@ -156,7 +156,7 @@ public class GestionAutomoviles {
         
         System.out.print("Seleccione el número del automóvil a modificar (1-" + contadorAutos + "): ");
         int numeroAuto = scanner.nextInt();
-        scanner.nextLine(); // Limpiar buffer
+        scanner.nextLine(); 
         
         if (numeroAuto < 1 || numeroAuto > contadorAutos) {
             System.out.println("Número de automóvil no válido.");
@@ -175,7 +175,7 @@ public class GestionAutomoviles {
         System.out.print("Seleccione una opción: ");
         
         int opcionModificar = scanner.nextInt();
-        scanner.nextLine(); // Limpiar buffer
+        scanner.nextLine(); 
         
         switch (opcionModificar) {
             case 1:
@@ -193,7 +193,7 @@ public class GestionAutomoviles {
             case 3:
                 System.out.print("Ingrese nuevo precio: $");
                 nuevoPrecio = scanner.nextDouble();
-                scanner.nextLine(); // Limpiar buffer
+                scanner.nextLine(); 
                 System.out.print("Ingrese nuevo color: ");
                 nuevoColor = scanner.nextLine();
                 

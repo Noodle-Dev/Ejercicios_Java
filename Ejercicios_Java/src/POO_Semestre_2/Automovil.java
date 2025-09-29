@@ -1,5 +1,5 @@
 public class Automovil {
-    // Atributos privados
+   
     private double precio;
     private String color;
     
@@ -15,7 +15,7 @@ public class Automovil {
         this.color = "";
     }
     
-    // Métodos GET
+    // GET
     public double getPrecio() {
         return precio;
     }
@@ -24,7 +24,7 @@ public class Automovil {
         return color;
     }
     
-    // Métodos SET
+    // SET
     public void setPrecio(double precio) {
         this.precio = precio;
     }
@@ -38,7 +38,6 @@ public class Automovil {
         System.out.println("Color: " + color + " | Precio: $" + precio);
     }
     
-    // Método toString para imprimir fácilmente
     @Override
     public String toString() {
         return "Automóvil [Color: " + color + ", Precio: $" + precio + "]";
