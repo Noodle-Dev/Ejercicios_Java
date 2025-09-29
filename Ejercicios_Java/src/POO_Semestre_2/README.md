@@ -17,3 +17,5 @@ java GestionAutomoviles.java
 
 
 No clonar completamente el repositorio, incluye proyectos de semestre pasado 
+
+![img](test.png)
